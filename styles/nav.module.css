@@ -1,0 +1,26 @@
+.logo img {
+  width: 100%;
+}
+
+.menu div {
+  width: 35%;
+  margin: 15px auto;
+}
+
+.menu div img {
+  width: 100%;
+}
+
+.sideon {
+  left: 0;
+}
+
+.sideoff {
+  left: -100px;
+}
+
+@media (min-width: 768px) {
+  .sideoff {
+    left: 0;
+  }
+}

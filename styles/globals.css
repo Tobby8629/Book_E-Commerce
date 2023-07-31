@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono:
@@ -116,3 +116,42 @@ a {
     color-scheme: dark;
   }
 } */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #f1e2e2;
+}
+
+#nav {
+  width: 100px;
+  height: 90vh;
+  position: fixed;
+  transition: 0.5s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #3339;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+}
+
+.drag {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
