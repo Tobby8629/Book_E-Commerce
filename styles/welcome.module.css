@@ -1,0 +1,31 @@
+.wrapper h3 {
+  font-family: 'Murecho', sans-serif;
+  font-size: 24px;
+  font-weight: 550;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.wrapper p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
+.wrapper button {
+  background-color: #000000b2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0;
+  text-align: left;
+  color: whitesmoke;
+  border-radius: 25px;
+  padding: 5px 15px;
+}

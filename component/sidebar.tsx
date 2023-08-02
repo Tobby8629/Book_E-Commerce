@@ -9,6 +9,7 @@ interface SidebarProps {
 function Sidebar({ side }: SidebarProps) {
   return (
     <nav id ='nav' className={side ? styles.sideoff : styles.sideon}>
+      <div className={styles.wrapper}>
       <div className={styles.all}>
         <div className={styles.logo}>
           <img src='logo.png' alt='logo' />
@@ -23,6 +24,7 @@ function Sidebar({ side }: SidebarProps) {
       </div>
       <div className={styles.logout}>
         <h2>Logout</h2>
+      </div>
       </div>
     </nav>
   )
