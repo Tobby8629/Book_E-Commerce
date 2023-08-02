@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/index.module.css'
 import Sidebar from '@/component/sidebar'
 import { useState } from 'react'
+import { Welcome } from '@/component'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,11 @@ export default function Home() {
         <div className='mobile drag' onClick={() => setside(!side)}>
           <p>{side ? "open" : "close"}</p>
         </div>
+        <div className={styles.top}>
+          <Welcome/>
+          
+        </div>
+        
       </main>
     </>
   )
