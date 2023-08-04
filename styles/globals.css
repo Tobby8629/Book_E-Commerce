@@ -150,6 +150,67 @@ body {
   right: 0;
 }
 
+.popular {
+  margin: 1rem 0;
+  font-family: 'Murecho', sans-serif;
+}
+
+.parent h4 {
+  font-size: 20px;
+}
+
+.parent {
+  overflow: hidden;
+}
+
+.sub {
+  display: flex;
+}
+
+.subt {
+  margin-bottom: 1rem ;
+}
+
+.image {
+  min-width: 30%;
+}
+
+.text {
+  min-width: 100%;
+  background-color: #93929236;
+  padding: 0.5rem;
+}
+
+.image img {
+  width: 100%;
+}
+
+.week  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.week li {
+ display: flex;
+ flex-direction: column;
+ width: 12%;
+ height: 65px;
+ text-align: center;
+ border-radius: 17px;
+ padding: 8px;
+ justify-content: space-between;
+ background-color: burlywood;
+}
+
+.weekend {
+  color: rgb(254, 64, 64);
+}
+
+.week .highlight {
+  background-color: brown;
+  color: white;
+}
+
 @media (min-width: 768px) {
   body {
     margin-left: 100px;

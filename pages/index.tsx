@@ -3,12 +3,66 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/index.module.css'
 import Sidebar from '@/component/sidebar'
 import { useState } from 'react'
-import { Welcome } from '@/component'
+import { Popular, Scheduled, Welcome } from '@/component'
+import { motion } from 'framer-motion'
+import Week from '@/component/schedule/Week'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const[side, setside] = useState(true)
+  const book = [
+    {
+      id: 1,
+      title: "tears of the sun",
+      author: "chinua achebe",
+      image: 'book1.png'
+    },
+    {
+      id: 2,
+      title: "tears of the sun",
+      author: "chinua achebe",
+      image: 'book2.png'
+    },
+    {
+      id: 3,
+      title: "tears of the sun",
+      author: "chinua achebe",
+      image: 'book3.png'
+    },
+    {
+      id: 4,
+      title: "tears of the sun",
+      author: "chinua achebe",
+      image: 'book4.png'
+    },
+    {
+      id: 5,
+      title: "tears of the sun",
+      author: "chinua achebe",
+      image: 'book1.png'
+    },
+    {
+      id:6,
+      title: "tears of the sun",
+      author: "chinua achebe",
+      image: 'book1.png'
+    },
+    {
+      id: 7,
+      title: "tears of the sun",
+      author: "chinua achebe",
+      image: 'book2.png'
+    },
+    {
+      id: 8,
+      title: "tears of the sun",
+      author: "chinua achebe",
+      image: 'book3.png'
+    }
+    
+  ]
+  
   return (
     <>
       <Head>
@@ -24,9 +78,12 @@ export default function Home() {
         </div>
         <div className={styles.top}>
           <Welcome/>
-          
         </div>
-        
+        <Popular header = "Popular now" array = {book} length = {450} />
+        <Scheduled />
+        <Week />
+        <Popular header = "New collection" array = {book} length = {450} />
+        <Popular header = "comments" array = {book}  length = {1550}/>
       </main>
     </>
   )
