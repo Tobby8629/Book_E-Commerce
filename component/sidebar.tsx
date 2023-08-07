@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from '@/styles/nav.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 interface SidebarProps {
@@ -23,7 +25,7 @@ function Sidebar({ side }: SidebarProps) {
         </div>
       </div>
       <div className={styles.logout}>
-        <h2>Logout</h2>
+        <FontAwesomeIcon icon={faRightFromBracket} />
       </div>
       </div>
     </nav>

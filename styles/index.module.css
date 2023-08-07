@@ -1,0 +1,47 @@
+.body_mobile {
+  padding: 0.5rem;
+}
+
+.body_desktop {
+  display: none;
+}
+
+.main h4 {
+  margin: 14px 0;
+}
+
+@media (min-width: 768px) {
+  .body_desktop {
+    display: block;
+    padding: 1.5rem;
+  }
+
+  .body_mobile {
+    display: none;
+  }
+
+  .top,
+  .middle,
+  .end {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top {
+    display: flex;
+  }
+
+  .middle {
+    align-items: flex-end;
+  }
+
+  .top .parent {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .body_desktop {
+    padding: 2rem 3rem;
+  }
+}

@@ -1,4 +1,5 @@
 import Days from "./date";
+import styles from "@/styles/popular.module.css"
 
 const Week = () => {
     const week = Days()
@@ -6,6 +7,8 @@ const Week = () => {
     const month= new Date().getDate()
     const days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
     return (
+      <div className={styles.wrap}>
+      <h4>Scheduled books</h4>
       <div className='week'>
         {week.map((e)=>(
           <li key={e.id} className={day === e.day && month === e.date ? "highlight" : ""}>
@@ -14,6 +17,7 @@ const Week = () => {
           </li>
         ))}
       </div> 
+      </div>
      );
     
 } 

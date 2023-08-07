@@ -4,8 +4,9 @@ import styles from '@/styles/index.module.css'
 import Sidebar from '@/component/sidebar'
 import { useState } from 'react'
 import { Popular, Scheduled, Welcome } from '@/component'
-import { motion } from 'framer-motion'
 import Week from '@/component/schedule/Week'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -62,7 +63,7 @@ export default function Home() {
     }
     
   ]
-  
+
   return (
     <>
       <Head>
@@ -74,16 +75,32 @@ export default function Home() {
       <main className={styles.main}>
         <Sidebar side={side}/> 
         <div className='mobile drag' onClick={() => setside(!side)}>
-          <p>{side ? "open" : "close"}</p>
+          <FontAwesomeIcon icon={side ? faBars : faTimes} />
         </div>
-        <div className={styles.top}>
-          <Welcome/>
-        </div>
-        <Popular header = "Popular now" array = {book} length = {450} />
-        <Scheduled />
-        <Week />
-        <Popular header = "New collection" array = {book} length = {450} />
-        <Popular header = "comments" array = {book}  length = {1550}/>
+        <main className={styles.body_mobile}>
+          <div className={styles.top}>
+            <Welcome/>
+          </div>
+          <Popular header = "Popular now" array = {book} length = {450} />
+          <Scheduled />
+          <Week />
+          <Popular header = "New collection" array = {book} length = {450} />
+          <Popular header = "comments" array = {book}  length = {1550}/>
+        </main>
+        <main className={styles.body_desktop}>
+          <div className={styles.top}>
+            <Welcome/>
+            <Scheduled />
+          </div>
+          <div className={styles.middle}>
+            <Popular header = "Popular now" array = {book} length = {250} />
+            <Week />
+          </div>
+          <div className={styles.end}>
+            <Popular header = "New collection" array = {book} length = {450} />
+            <Popular header = "comments" array = {book}  length = {1550}/>
+          </div>
+        </main>
       </main>
     </>
   )

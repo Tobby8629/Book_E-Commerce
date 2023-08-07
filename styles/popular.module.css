@@ -1,0 +1,55 @@
+.popular {
+  margin: 1rem 0;
+  font-family: 'Murecho', sans-serif;
+}
+
+.parent {
+  overflow: hidden;
+}
+
+.sub {
+  display: flex;
+  cursor: grabbing;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    width: 47%;
+    margin-bottom: 2rem;
+  }
+
+  .wrap li {
+    width: 12%;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 40%;
+    margin-bottom: 2.5rem;
+  }
+
+  .wrap li {
+    width: 11%;
+    border-radius: 23px;
+    margin-right: 8px;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrap {
+    width: 40%;
+    margin-bottom: 3rem;
+  }
+
+  .wrap li {
+    width: 11%;
+    border-radius: 23px;
+    margin-right: 8px;
+    font-size: 15px;
+    height: 80px;
+  }
+}

@@ -1,12 +1,13 @@
 import React from 'react';
 import {motion} from 'framer-motion'
+import styles from '@/styles/popular.module.css'
 
 function scheduled() {
   const scheduled = [
     {
       id:1,
       book: "tears of the sun",
-      date: "2023-08-04",
+      date: "2023-08-07",
     },
     {
       id:2,
@@ -16,22 +17,22 @@ function scheduled() {
     {
       id:3,
       book: "tears of the sun",
-      date: "2023-08-04",
+      date: "2023-08-07",
     },
     {
       id:4,
       book: "tears of the sun",
-      date: "2023-08-04",
+      date: "2023-08-07",
     },
     {
       id:5,
       book: "tears of the sun",
-      date: "2023-08-04",
+      date: "2023-08-07",
     },
     {
       id:6,
       book: "tears of the sun",
-      date: "2023-08-04",
+      date: "2023-08-07",
     },
   ]
   const date = new Date();
@@ -49,12 +50,12 @@ function scheduled() {
  ))
   
   return (
-    <motion.div className='parent'>
+    <motion.div className={styles.parent}>
      <motion.div 
      className='sub subt'
      drag="x"
      dragElastic={0.5}
-     dragConstraints ={{right: 0, left: -275 * arr.length}}
+     dragConstraints ={{right: 0, left: -300 * arr.length}}
      >
          {arr.map((e)=>(
               <motion.div key={e.id} className='text'>

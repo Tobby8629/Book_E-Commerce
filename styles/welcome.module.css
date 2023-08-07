@@ -29,3 +29,19 @@
   border-radius: 25px;
   padding: 5px 15px;
 }
+
+@media (min-width: 768px) {
+  .wrapper h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 43px;
+    letter-spacing: 0.04em;
+  }
+}
+
+@media (min-width: 1020px) {
+  .wrapper h3 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}

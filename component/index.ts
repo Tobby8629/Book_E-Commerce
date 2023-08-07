@@ -5,6 +5,8 @@ import DraggableDiv from './drag'
 import Welcome from './welcome/welcome'
 import Scheduled from './schedule/scheduled'
 import Popular from './Books/popular'
+import UseResponsive from './utility'
+
 export{
   date,
   week,
@@ -12,5 +14,6 @@ export{
   DraggableDiv,
   Welcome,
   Scheduled,
-  Popular
+  Popular,
+  UseResponsive
 }
