@@ -2,16 +2,17 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/index.module.css'
 import Sidebar from '@/component/sidebar'
-import { useState } from 'react'
+import PropTypes from 'prop-types'
 import { Popular, Scheduled, Welcome } from '@/component'
 import Week from '@/component/schedule/Week'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 const inter = Inter({ subsets: ['latin'] })
+// interface HomeProps {
+//   side: boolean;
+// } 
 
 export default function Home() {
-  const[side, setside] = useState(true)
+  
   const book = [
     {
       id: 1,
@@ -73,10 +74,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Sidebar side={side}/> 
-        <div className='mobile drag' onClick={() => setside(!side)}>
-          <FontAwesomeIcon icon={side ? faBars : faTimes} />
-        </div>
+        {/* <Sidebar side={side} changeicon={changeicon}/>  */}
         <main className={styles.body_mobile}>
           <div className={styles.top}>
             <Welcome/>
@@ -105,5 +103,9 @@ export default function Home() {
     </>
   )
 }
+
+// Home.propTypes = {
+//   side: PropTypes.bool.isRequired,
+// };
 
 

@@ -13,7 +13,8 @@
 @media (min-width: 768px) {
   .body_desktop {
     display: block;
-    padding: 1.5rem;
+    padding: .5rem 1.5rem;
+    padding-top: 6rem;
   }
 
   .body_mobile {
@@ -42,6 +43,7 @@
 
 @media (min-width: 1280px) {
   .body_desktop {
-    padding: 2rem 3rem;
+    padding: 0.5rem 3rem;
+    padding-top: 6rem;
   }
 }

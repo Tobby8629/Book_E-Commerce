@@ -3,7 +3,7 @@
 }
 
 .menu div {
-  width: 35%;
+  width: 25%;
   margin: 15px auto;
 }
 
@@ -17,6 +17,10 @@
 
 .sideoff {
   left: -100px;
+}
+
+.menu .book {
+  width: 18%;
 }
 
 .wrapper {
