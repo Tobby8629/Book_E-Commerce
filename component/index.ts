@@ -6,6 +6,8 @@ import Welcome from './welcome/welcome'
 import Scheduled from './schedule/scheduled'
 import Popular from './Books/popular'
 import UseResponsive from './utility'
+import Author from './Books/author'
+import Categories from './Books/categories'
 
 export{
   date,
@@ -15,5 +17,7 @@ export{
   Welcome,
   Scheduled,
   Popular,
-  UseResponsive
+  UseResponsive,
+  Author,
+  Categories,
 }

@@ -198,7 +198,7 @@ h4 {
   display: flex;
 }
 
- img {
+img {
   width: 100%;
   -webkit-user-drag: none;
 }

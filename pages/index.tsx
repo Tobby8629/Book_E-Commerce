@@ -77,7 +77,7 @@ export default function Home() {
         {/* <Sidebar side={side} changeicon={changeicon}/>  */}
         <main className={styles.body_mobile}>
           <div className={styles.top}>
-            <Welcome/>
+            <Welcome header="Happy reading, Tobby" button="start reading"/>
           </div>
           <Popular header = "Popular now" array = {book} length = {450} />
           <Scheduled />
@@ -87,7 +87,7 @@ export default function Home() {
         </main>
         <main className={styles.body_desktop}>
           <div className={styles.top}>
-            <Welcome/>
+            <Welcome  header="Happy reading, Tobby" button="start reading"/>
             <Scheduled />
           </div>
           <div className={styles.middle}>

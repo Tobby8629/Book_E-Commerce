@@ -1,0 +1,15 @@
+.books {
+  margin-top: 4rem;
+  padding: 1rem;
+}
+
+.cateimage {
+  width: 150px;
+}
+
+@media (min-width: 768px) {
+  .books {
+    margin-top: 8rem;
+    padding: 1rem;
+  }
+}
