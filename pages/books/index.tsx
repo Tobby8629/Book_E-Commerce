@@ -40,9 +40,14 @@ const Books = ({brr}:bro) => {
       }, []);
     return ( 
         <div className={styles.books}>
-          <Welcome header="Keep Reading the story" button='Start reading' />
-          {desktop ? <Author detail = {bookdetail}/> : null}
+          <div className={styles.headflex}>
+            <Welcome header="Keep Reading the story" button='Start reading' />
+            {desktop ? <Author detail = {bookdetail}/> : null}
+          </div>
           <Categories desktop = {desktop} cate='chinua achebe'  bookinfo={bookinfo}/>
+          <Categories desktop = {desktop} cate='popoola samuel'  bookinfo={bookinfo}/>
+          <Categories desktop = {desktop} cate='chinua achebe'  bookinfo={bookinfo}/>
+          <Categories desktop = {desktop} cate='popoola samuel'  bookinfo={bookinfo}/>
         </div>
      );
 }

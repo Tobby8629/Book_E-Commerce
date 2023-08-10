@@ -1,5 +1,5 @@
 import book from '@/public/bookss'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '@/styles/books.module.css'
 import PropTypes from 'prop-types'
 
@@ -11,7 +11,18 @@ interface categories {
 
 function categories({cate,desktop, bookinfo}: categories) {
   let books = book.filter((e)=> e.author === cate)
-  desktop ? books : books.splice(3,books.length)
+  desktop ? books : books.splice(6,books.length)
+  let [page, setpage] = useState(0)
+  let num = desktop ? 5:3
+  let start = page * num
+  let end = start + num
+  let arr = books.slice(start,end)
+  let loopnum = books.length/num
+  let loop = []
+  for (let index = 1; index <= loopnum; index++) {
+    loop.push(index)
+  }
+
   return (
     <div className={styles.catewrap}>
        <div className={styles.catehead}>
@@ -19,8 +30,8 @@ function categories({cate,desktop, bookinfo}: categories) {
          <a href={cate}>show all</a>
        </div>
        <div className={styles.catebooks}>
-        {books.map((book)=>(
-          <div key={book.id}>
+        {arr.map((book)=>(
+          <div className={styles.each} key={book.id}>
             <div className={styles.cateimage} onMouseOver={()=>bookinfo(book.id)}>
               <img src={book.image} />
             </div>
@@ -28,10 +39,12 @@ function categories({cate,desktop, bookinfo}: categories) {
              <div className={styles.mhover}>
               <h4>{book.title}</h4>
               <p>{book.author}</p>
-              <p>{book.desc.split(" ").slice(0,10).join(' ')}</p>
             </div>}
           </div>
         ))}
+       </div>
+       <div className={styles.btns}>
+         {loop.length > 1 && loop.map((e)=><div key={e} className={styles.btn} onClick={()=> setpage(e-1)}></div>)}  
        </div>
     </div>
   )
