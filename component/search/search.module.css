@@ -15,13 +15,15 @@
   position: fixed;
   width: calc(100% - 100px);
   right: 0;
+  top: 0;
   backdrop-filter: blur(40px);
   padding: 0 3rem;
-  margin-top: 5rem;
+  margin-top: 5.3rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   overflow: scroll;
+  z-index: 999;
 }
 
 .column {

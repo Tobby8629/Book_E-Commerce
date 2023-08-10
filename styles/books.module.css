@@ -83,7 +83,6 @@
   transform: translateY(0);
 }
 
-
 .cate {
   width: 23%;
 }
@@ -96,11 +95,54 @@
 
   .headflex {
     display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #f1e2e2;
+    top: 13.4%;
+    z-index: 9;
+    padding: 1.5rem 0;
+  }
+
+  .cat {
+    margin-top: 14rem;
+  }
+
+  .author {
+    width: 35%;
+  }
+
+  .intro {
+    display: flex;
     align-items: center;
+    margin: 10px 0;
+  }
+
+  .intro h6 {
+    font-size: 20px;
   }
 
   .image {
-    width: 120px;
+    width: 40px;
+    height: 45px;
+    margin-right: 5px;
+  }
+
+  .image img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  /* .name {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 1rem;
+  } */
+
+  .name h4 {
+    text-transform: capitalize;
   }
 
   .catehead {
@@ -110,6 +152,12 @@
   .catebooks {
     justify-content: unset;
     margin-right: 4.5px;
+  }
+
+  .desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
   }
 
   .each {
@@ -136,5 +184,12 @@
 @media (min-width: 1024px) {
   .books {
     padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .headflex {
+    top: 12.3%;
+    padding-top: 2.3rem;
   }
 }

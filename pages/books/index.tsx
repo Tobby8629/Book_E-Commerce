@@ -44,10 +44,12 @@ const Books = ({brr}:bro) => {
             <Welcome header="Keep Reading the story" button='Start reading' />
             {desktop ? <Author detail = {bookdetail}/> : null}
           </div>
-          <Categories desktop = {desktop} cate='chinua achebe'  bookinfo={bookinfo}/>
-          <Categories desktop = {desktop} cate='popoola samuel'  bookinfo={bookinfo}/>
-          <Categories desktop = {desktop} cate='chinua achebe'  bookinfo={bookinfo}/>
-          <Categories desktop = {desktop} cate='popoola samuel'  bookinfo={bookinfo}/>
+          <div className={styles.cat}>
+            <Categories desktop = {desktop} cate='chinua achebe'  bookinfo={bookinfo}/>
+            <Categories desktop = {desktop} cate='popoola samuel'  bookinfo={bookinfo}/>
+            <Categories desktop = {desktop} cate='chinua achebe'  bookinfo={bookinfo}/>
+            <Categories desktop = {desktop} cate='popoola samuel'  bookinfo={bookinfo}/>
+          </div>
         </div>
      );
 }
