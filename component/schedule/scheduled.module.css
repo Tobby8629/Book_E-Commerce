@@ -1,0 +1,9 @@
+.schedule {
+  padding: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .schedule {
+    margin-top: 7rem;
+  }
+}

@@ -27,7 +27,7 @@ useEffect(() => {
        <div className={styles.wrapper}>
           <div className={styles.intro}>
             <div className={styles.image}>
-              <img src="sam.jpg" alt={detail.title}  data-aos="fade-out"/>
+              <img src="/sam.jpg" alt={detail.title}  data-aos="fade-out"/>
             </div>
             <div>
               <h6>{detail.author}</h6>

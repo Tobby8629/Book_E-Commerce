@@ -20,7 +20,7 @@ const Search = ({ free, off}: SearchProps) => {
         <div className={styles.userdata}>
           <div className={styles.user}>
             <div className={styles.image}>
-              <img src='sam.jpg' />
+              <img src='/sam.jpg' />
             </div>
             <p>Samuel Popoola</p>
           </div>

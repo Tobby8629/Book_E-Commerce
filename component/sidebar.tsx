@@ -86,33 +86,33 @@ function Sidebar({ side,changeicon }: SidebarProps) {
       <div className={styles.all}>
         <div className={styles.logo}>
           <a href='/'>
-            <img src='logo.png' alt='logo' />
+            <img src='/logo.png' alt='logo' />
           </a>
         </div>
         <div className={styles.menu}>
           <div>
             <a href='/'>
-              <img src='home.png' alt='home' />
+              <img src='/home.png' alt='home' />
             </a>
           </div>
           <div>
             <a href='/books'>
-              <img src='books.png' alt='books' />
+              <img src='/books.png' alt='books' />
             </a>
           </div>
           <div>
             <a href='/schedule'>
-              <img src='schedule.png' alt='schedule' />
+              <img src='/schedule.png' alt='schedule' />
             </a>
           </div>
           <div className={styles.book}>
               <a href='/scheduled'>
-                <img src='vector.png' alt='Vector' />
+                <img src='/vector.png' alt='Vector' />
               </a>
           </div>
           <div>
             <a href='/settings'>
-            <img src='settings.png' alt='settings' />
+            <img src='/settings.png' alt='settings' />
             </a>
           </div>
         </div>
