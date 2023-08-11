@@ -8,6 +8,7 @@ import Popular from './Books/popular'
 import UseResponsive from './utility'
 import Author from './Books/author'
 import Categories from './Books/categories'
+import Scheduledpage from './schedule/scheduledpage'
 
 export{
   date,
@@ -20,4 +21,5 @@ export{
   UseResponsive,
   Author,
   Categories,
+  Scheduledpage
 }
