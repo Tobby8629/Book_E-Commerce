@@ -1,6 +1,7 @@
 import book from '@/public/bookss'
 import React, { useState } from 'react'
 import styles from '@/styles/books.module.css'
+import pagination from '../pagination'
 import PropTypes from 'prop-types'
 
 interface categories {
@@ -13,15 +14,8 @@ function categories({cate,desktop, bookinfo}: categories) {
   let books = book.filter((e)=> e.author === cate)
   desktop ? books : books.splice(6,books.length)
   let [page, setpage] = useState(0)
-  let num = desktop ? 5:3
-  let start = page * num
-  let end = start + num
-  let arr = books.slice(start,end)
-  let loopnum = books.length/num
-  let loop = []
-  for (let index = 1; index <= loopnum; index++) {
-    loop.push(index)
-  }
+  const{arr,loop} = pagination(desktop,5,3,books,page)
+  
 
   return (
     <div className={styles.catewrap}>
@@ -30,7 +24,12 @@ function categories({cate,desktop, bookinfo}: categories) {
          <a href={cate}>show all</a>
        </div>
        <div className={styles.catebooks}>
-        {arr.map((book)=>(
+        {arr.map((book: {
+          id: number,
+          image: string,
+          title: string,
+          author: string
+        })=>(
           <div className={styles.each} key={book.id}>
             <div className={styles.cateimage} onMouseOver={()=>bookinfo(book.id)}>
               <img src={book.image} />

@@ -1,9 +1,272 @@
 .schedule {
   padding: 0.8rem;
+  margin-top: 3rem;
+}
+
+.split {
+  display: flex;
+  margin: 1rem 0;
+  justify-content: space-between;
+}
+
+.image {
+  width: 49%;
+}
+
+.text {
+  width: 49%;
+}
+
+.text h4 {
+  font-size: 15px;
+  font-family: 'Murecho', sans-serif;
+  text-transform: capitalize;
+  margin: 3px 0;
+}
+
+.text h6 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.text p {
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.btns {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.else h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 30px;
+}
+
+.btn {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin-right: 12px;
+  background-color: rgb(88, 18, 18);
+}
+
+.down {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.right {
+  display: flex;
+  width: 70%;
+}
+
+.icon {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.left button,
+.else button {
+  padding: 5px;
+  background-color: gray;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.else button {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(171, 170, 170, 0.747);
+}
+
+.else button a {
+  color: white;
+  padding: 0.5rem 0.5rem;
+  font-size: 18px;
+}
+
+.desc p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.lang {
+  margin: 0.5rem 0;
+}
+
+.lang h6 {
+  margin: 0.5rem 0;
+}
+
+.paper li,
+.lang p {
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {
   .schedule {
     margin-top: 7rem;
+  }
+
+  .split {
+    justify-content: unset;
+  }
+
+  .up {
+    margin-bottom: 4rem;
+  }
+
+  .image {
+    margin-right: 1rem;
+  }
+
+  .wraps {
+    width: 85%;
+  }
+
+  .down {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .text {
+    width: 35%;
+  }
+
+  .right {
+    width: 40%;
+  }
+
+  .right .icon {
+    width: 33%;
+  }
+
+  .desc .down {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .desc {
+    width: 60%;
+  }
+
+  .descpages {
+    width: 30%;
+  }
+
+  .descdown {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image {
+    width: 40%;
+    margin-right: 2rem;
+  }
+
+  .text {
+    width: 50%;
+  }
+
+  .text h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .text h6 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 900;
+  }
+
+  .text p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+
+  .down {
+    width: 100%;
+  }
+
+  .left button {
+    font-size: 18px;
+    border-radius: 25px;
+    padding: 0.7rem;
+  }
+
+  .right {
+    width: 50%;
+  }
+
+  .desc p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  .paper li,
+  .lang p {
+    font-size: 18px;
+  }
+
+  .lang h6,
+  .desc h6 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .schedule {
+    margin-top: 5rem;
+  }
+
+  .wraps {
+    padding: 0 2rem;
+  }
+
+  .split {
+    justify-content: center;
+  }
+
+  .text {
+    width: 40%;
+  }
+
+  .btn {
+    width: 14px;
+    height: 14px;
+  }
+
+  .desc p,
+  .text p {
+    line-height: 35px;
+  }
+
+  .image {
+    width: 30%;
+  }
+
+  .right {
+    width: 35%;
   }
 }

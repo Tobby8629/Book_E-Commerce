@@ -9,6 +9,7 @@ import UseResponsive from './utility'
 import Author from './Books/author'
 import Categories from './Books/categories'
 import Scheduledpage from './schedule/scheduledpage'
+import Pagination from './pagination'
 
 export{
   date,
@@ -21,5 +22,6 @@ export{
   UseResponsive,
   Author,
   Categories,
-  Scheduledpage
+  Scheduledpage,
+  Pagination
 }

@@ -268,6 +268,10 @@ img {
     justify-content: unset;
   }
 
+  .week a {
+    margin-right: 10px;
+  }
+
   #nav {
     backdrop-filter: blur(0);
     margin: auto 0;
@@ -293,6 +297,18 @@ img {
   .styles_end__miCba .popular_popular__CDj_R {
     width: 45%;
   }
+
+  .scheduled_schedule__xdEzl .week {
+    position: fixed;
+    right: 0;
+    flex-direction: column;
+  }
+
+  .scheduled_schedule__xdEzl .week a {
+    padding: 0.5rem  1.5rem;
+    margin: 7px;
+    color: white;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -310,6 +326,11 @@ img {
 
   .popular .parent {
     width: 100%;
+  }
+
+  .week a {
+    width: 10%;
+    border-radius: 20px;
   }
 
   .wrap {

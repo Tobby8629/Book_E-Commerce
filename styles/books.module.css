@@ -118,7 +118,7 @@
   }
 
   .intro h6 {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .image {
@@ -155,9 +155,9 @@
   }
 
   .desc {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 22px;
   }
 
   .each {
@@ -189,7 +189,7 @@
 
 @media (min-width: 1280px) {
   .headflex {
-    top: 12.3%;
-    padding-top: 2.3rem;
+    top: 9%;
+    padding-top: 3rem;
   }
 }

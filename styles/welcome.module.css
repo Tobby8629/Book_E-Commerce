@@ -32,10 +32,15 @@
 
 @media (min-width: 768px) {
   .wrapper h3 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
     line-height: 43px;
     letter-spacing: 0.04em;
+  }
+
+  .wrapper p {
+    font-size: 12px;
+    line-height: 25px;
   }
 }
 
@@ -43,5 +48,9 @@
   .wrapper h3 {
     font-size: 40px;
     line-height: 50px;
+  }
+
+  .wrapper p {
+    font-size: 15px;
   }
 }
