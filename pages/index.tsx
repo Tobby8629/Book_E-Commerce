@@ -1,3 +1,4 @@
+"use client"
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/index.module.css'
@@ -5,11 +6,12 @@ import Sidebar from '@/component/sidebar'
 import PropTypes from 'prop-types'
 import { Popular, Scheduled, Welcome } from '@/component'
 import Week from '@/component/schedule/Week'
+import {getSession, useSession} from 'next-auth/react'
+import { useRouter } from 'next/router'
+import { signIn, signOut } from 'next-auth/react'
+import { use, useEffect, useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
-// interface HomeProps {
-//   side: boolean;
-// } 
 
 export default function Home() {
   
@@ -65,6 +67,19 @@ export default function Home() {
     
   ]
 
+  const route = useRouter()
+
+  // const [data,setdata] = useState()
+
+  // useEffect(()=>{
+  //   const dat = localStorage.getItem('user')
+  //   setdata(dat)
+  // })
+
+  // const session = getSession()
+  const {data: session} = useSession()
+  console.log(session)
+    
   return (
     <>
       <Head>

@@ -23,7 +23,7 @@ useEffect(() => {
   return (
     <>
      {detail ? 
-      <div className={styles.author} data-aos="fade-out">
+      <a href={`/author/${detail.author}`} className={styles.author} data-aos="fade-out">
        <div className={styles.wrapper}>
           <div className={styles.intro}>
             <div className={styles.image}>
@@ -38,7 +38,7 @@ useEffect(() => {
             <p className={styles.desc}>{detail.desc.split(" ").slice(0,20).join(" ")}</p>
           </div>
        </div>
-      </div> :
+      </a> :
     <p style={{color: 'red'}}>hover on a book to show details</p> 
     }
     </>

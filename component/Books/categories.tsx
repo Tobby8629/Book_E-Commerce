@@ -30,7 +30,7 @@ function categories({cate,desktop, bookinfo}: categories) {
           title: string,
           author: string
         })=>(
-          <div className={styles.each} key={book.id}>
+          <a className={styles.each} key={book.id} href={`./books/book/${book.id}`}>
             <div className={styles.cateimage} onMouseOver={()=>bookinfo(book.id)}>
               <img src={book.image} />
             </div>
@@ -39,7 +39,7 @@ function categories({cate,desktop, bookinfo}: categories) {
               <h4>{book.title}</h4>
               <p>{book.author}</p>
             </div>}
-          </div>
+          </a>
         ))}
        </div>
        <div className={styles.btns}>

@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import styles from '@/styles/nav.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRightFromBracket, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faRightFromBracket, faBars, faTimes, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import Search from './search/search';
 import Searchpage from './search/searchpage';
+import {useRouter} from 'next/router'
+import { useDispatch } from 'react-redux';
+import { useSession } from 'next-auth/react'
+import {signIn, signOut} from 'next-auth/react'
 
 interface SidebarProps {
   side: boolean;
@@ -63,6 +67,20 @@ function Sidebar({ side,changeicon }: SidebarProps) {
     }
     
   ]
+
+  // const route = useRouter()
+  // const dispatch = useDispatch()
+
+  // const signIn = () => {
+  //  route.push('/login')
+  // }
+
+  // const signOut = () => {
+  //   dispatch(logout)
+  // }
+
+  const {data: session} = useSession()
+
   const [open, setopen] = useState(false)
   const [off, setoff] = useState(true)
   const [text, settext] = useState('')
@@ -84,10 +102,10 @@ function Sidebar({ side,changeicon }: SidebarProps) {
       <nav id ='nav' className={side ? styles.sideoff : styles.sideon}>
       <div className={styles.wrapper}>
       <div className={styles.all}>
-        <div className={styles.logo}>
-          <a href='/'>
+        <div className={styles.logo} onClick={()=>signOut()}>
+          {/* <a href='/'> */}
             <img src='/logo.png' alt='logo' />
-          </a>
+          {/* </a> */}
         </div>
         <div className={styles.menu}>
           <div>
@@ -111,14 +129,20 @@ function Sidebar({ side,changeicon }: SidebarProps) {
               </a>
           </div>
           <div>
-            <a href='/settings'>
+            <a href='/profile'>
             <img src='/settings.png' alt='settings' />
             </a>
           </div>
         </div>
       </div>
-      <div className={styles.logout}>
-        <FontAwesomeIcon icon={faRightFromBracket} />
+      <div>
+        {session ? 
+        <div className={styles.logout} onClick={()=>signOut()}>
+          <FontAwesomeIcon icon={faRightFromBracket} />
+        </div> :
+        <div className={styles.logout} onClick={()=>signIn()}>
+          <FontAwesomeIcon icon={faRightToBracket} />
+        </div>}
       </div>
       </div>
       </nav>

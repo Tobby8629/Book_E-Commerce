@@ -133,6 +133,10 @@ body {
   margin-top: 3.5rem;
 }
 
+a {
+  color: rgb(15, 15, 15);
+}
+
 h3 {
   font-family: 'Murecho', sans-serif;
   font-size: 24px;
@@ -309,6 +313,10 @@ img {
     margin: 7px;
     color: white;
   }
+
+  /* .profile_wrapper__Zob5i .search_search__PDA1_ {
+    display: none;
+  } */
 }
 
 @media (min-width: 1280px) {

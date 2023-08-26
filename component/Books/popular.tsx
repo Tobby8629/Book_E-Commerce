@@ -20,9 +20,12 @@ function popular({header,array,length}: popularProps) {
           dragConstraints = {{right: 0, left: -length}}>
             {array.map((e)=>(
               <motion.div key={e.id} className='image'>
-                <img src={e.image} alt={e.title} />
+                <a href={`./books/book/${e.id}`}>
+                  <img src={e.image} alt={e.title} />
+                </a>
               </motion.div>
             ))}
+             
         </motion.div>  
       </motion.div>
     </div>

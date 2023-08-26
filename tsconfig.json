@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "redux/user/UserSlice.ts", "pages/profile.jsx", "redux/store.js", "pages/profile.jsx", "redux/store.js"],
   "exclude": ["node_modules"]
 }

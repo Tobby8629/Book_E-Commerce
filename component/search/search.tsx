@@ -3,6 +3,7 @@ import styles from './search.module.css'
 import PropTypes from 'prop-types';
 import { faBell, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import {useSession} from 'next-auth/react'
 
 interface SearchProps {
   free: (event: string) => void;
@@ -10,7 +11,11 @@ interface SearchProps {
 }
 
 const Search = ({ free, off}: SearchProps) => {
+    const {data: session} = useSession()
     
+    if(!session){
+      return null
+    }
     return ( 
      <div className={styles.search}>
         <label className={styles.inputsearch} >
